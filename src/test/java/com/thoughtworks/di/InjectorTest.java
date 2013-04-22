@@ -1,5 +1,6 @@
 package com.thoughtworks.di;
 
+import com.example.*;
 import com.thougtworks.di.*;
 import org.junit.Test;
 
@@ -93,4 +94,5 @@ public class InjectorTest {
 
         assertEquals(demo.getServcie().execute(), "Hi");
     }
+
 }

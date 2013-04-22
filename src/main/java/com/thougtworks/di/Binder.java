@@ -1,15 +1,19 @@
 package com.thougtworks.di;
 
+import com.thougtworks.di.annotation.ImplementedBy;
+import com.thougtworks.di.annotation.Inject;
+import com.thougtworks.di.template.*;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Binder {
     private Scopes scope = Scopes.NO_SCOPE;
     private HashMap<Class<?> , Object> buildTemplate = new HashMap();
     private Class<?> srcClass;
     private HashMap singletonInstances = new HashMap();
+    private HashMap<Class<?>, Object[]> constructors = new HashMap<Class<?>, Object[]>();
 
     public Binder bind(Class<?> clazz) {
         srcClass = clazz;
@@ -49,9 +53,10 @@ public class Binder {
     public Object getInstance(Class<?> clazz) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 
         BuildTemplate template = getBuildTemplate(clazz);
+        Object[] constructorParams = constructors.get(clazz);
 
         if (scope == Scopes.NO_SCOPE || singletonInstances.get(clazz) == null) {
-            singletonInstances.put(clazz, template.getInstance());
+            singletonInstances.put(clazz, template.getInstance(constructorParams));
         }
 
         fieldInject(clazz, singletonInstances.get(clazz));

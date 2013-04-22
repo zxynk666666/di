@@ -1,7 +1,8 @@
 package com.thougtworks.di;
 
+import com.thougtworks.di.annotation.Inject;
+
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 public class Injector {
