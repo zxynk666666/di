@@ -1,14 +1,13 @@
 package com.thoughtworks.di;
 
-import com.example.*;
-import com.thougtworks.di.*;
+import com.thoughtworks.di.example.*;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationTargetException;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
-import static org.testng.AssertJUnit.assertEquals;
 
 public class InjectorTest {
 

@@ -1,0 +1,13 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.thoughtworks.di.InjectorTest" tests="7" failures="0" errors="0" timestamp="2013-04-23T14:09:33" hostname="TWers-MacBook-Pro-9.local" time="0.019">
+  <properties/>
+  <testcase name="shouldBindInterfaceToImplementation" classname="com.thoughtworks.di.InjectorTest" time="0.004"/>
+  <testcase name="shouldBindSubClassToSuperClass" classname="com.thoughtworks.di.InjectorTest" time="0.0"/>
+  <testcase name="shouldBindClassToANewInstance" classname="com.thoughtworks.di.InjectorTest" time="0.003"/>
+  <testcase name="shouldBindClassToProvider" classname="com.thoughtworks.di.InjectorTest" time="0.001"/>
+  <testcase name="shouldBindInterfaceToImplementationWithScope" classname="com.thoughtworks.di.InjectorTest" time="0.0"/>
+  <testcase name="shouldBindInterfaceToImplementationByAnnotation" classname="com.thoughtworks.di.InjectorTest" time="0.005"/>
+  <testcase name="shouldSupportFieldInject" classname="com.thoughtworks.di.InjectorTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
